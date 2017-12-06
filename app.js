@@ -37,6 +37,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 //bodyParser
 app.use(bodyParser.json());
 
+//User routes
 app.use('/users', users);
 
 //testing home route

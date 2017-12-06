@@ -1,22 +1,26 @@
 {
   "name": "meanauthapp",
   "version": "1.0.0",
-  "description": "\"MEAN stack authentication setup",
+  "description": "MEAN stack authentication setup",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node app"
   },
   "dependencies": {
-    "express": "*",
-    "mongoose": "*",
     "bcryptjs": "*",
-    "cors": "*",
-    "jsonwebtoken": "*",
     "body-parser": "*",
+    "cors": "*",
+    "express": "*",
+    "jsonwebtoken": "*",
+    "mongoose": "^4.10.8",
     "passport": "*",
     "passport-jwt": "*"
   },
   "author": "weston",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/westondombroski/mean_template.git"
+  }
 }
