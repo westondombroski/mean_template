@@ -45,7 +45,7 @@ export class AuthService {
   }
 
   loggedIn() {
-    console.log(tokenNotExpired());
+    console.log(tokenNotExpired());  //testing!!... still shows up false regardless of loggedIn'edness
     return tokenNotExpired();
   }
 
