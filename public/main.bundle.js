@@ -712,13 +712,13 @@ var AuthService = (function () {
     }
     AuthService.prototype.registerUser = function (user) {
         return this.http
-            .post('http://localhost:3000/users/register', user, {
+            .post('users/register', user, {
             headers: new __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["c" /* HttpHeaders */]().set('Content-Type', 'application/json'),
         });
     };
     AuthService.prototype.authenticateUser = function (user) {
         return this.http
-            .post('http://localhost:3000/users/authenticate', user, {
+            .post('users/authenticate', user, {
             headers: new __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["c" /* HttpHeaders */]().set('Content-Type', 'application/json'),
         });
     };
@@ -726,7 +726,7 @@ var AuthService = (function () {
         var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["c" /* HttpHeaders */]();
         this.loadToken();
         headers.set('Content-Type', 'application/json');
-        return this.http.get('http://localhost:3000/users/profile', {
+        return this.http.get('users/profile', {
             headers: headers.set('Authorization', this.authToken)
         });
     };
