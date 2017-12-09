@@ -29,7 +29,9 @@ export class AuthService {
     let headers = new HttpHeaders();
     this.loadToken();
     headers.set('Content-Type', 'application/json');
-    return this.http.get('http://localhost:3000/users/profile', {headers: headers.set('Authorization', this.authToken)});
+    return this.http.get('http://localhost:3000/users/profile', {
+      headers: headers.set('Authorization', this.authToken)
+    })
   }
 
   storeUserData(token, user){
@@ -45,8 +47,7 @@ export class AuthService {
   }
 
   loggedIn() {
-    console.log(tokenNotExpired());  //testing!!... still shows up false regardless of loggedIn'edness
-    return tokenNotExpired();
+    return tokenNotExpired('id_token');
   }
 
   logout(){
